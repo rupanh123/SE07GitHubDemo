@@ -5,6 +5,8 @@
  */
 package business;
 
+import java.time.LocalDate;
+
 /**
  *
  * @author Phap
@@ -12,8 +14,23 @@ package business;
 public class Student {
     private int studentId;
     private String studentName;
+    private LocalDate birthDate;
 
     public Student() {
+    }
+
+    public LocalDate getBirthDate() {
+        return birthDate;
+    }
+
+    public void setBirthDate(LocalDate birthDate) {
+        this.birthDate = birthDate;
+    }
+
+    public Student(int studentId, String studentName, LocalDate birthDate) {
+        this.studentId = studentId;
+        this.studentName = studentName;
+        this.birthDate = birthDate;
     }
 
     public Student(int studentId, String studentName) {
